@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <h1>To-Do List</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="task" placeholder="New task here..." required>
+        <button class="button" type="submit">Add Task</button>
+    </form>
+    <ul id="todo-list">
+        {% for task in tasks %}
+            <li 
+                class="task {{ 'done' if task[2] else '' }}" 
+                draggable="true" 
+                data-id="{{ task[0] }}">
+                <span>{{ task[1] }}</span>
+                <div class="buttons">
+                    {% if not task[2] %}
+                        <a href="/done/{{ task[0] }}" class="button">Mark Complete</a>
+                    {% endif %}
+                    <a href="/delete/{{ task[0] }}" class="button delete">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

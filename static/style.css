@@ -1,0 +1,123 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #31B7C2; /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(135deg, #31B7C2, #7BC393); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: 
+        linear-gradient(135deg,
+            rgba(49, 183, 194, 0.7) 0%,
+            rgba(123, 195, 147, 0.8) 100%),
+            url("mountain_background_1920x1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    font-size: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #777;
+}
+
+li.done span {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button.delete {
+    background-color: #dc3545;
+}
+
+.button.delete:hover {
+    background-color: #a71d2a;
+}
+
+.task {
+    cursor: grab;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.task[draggable="true"] {
+    transition: transform 0.2s ease;
+}
+
+.task.dragging {
+    background-color: #f0f0f0;
+    border: 2px dashed #007bff;
+    opacity: 0.8;
+}
